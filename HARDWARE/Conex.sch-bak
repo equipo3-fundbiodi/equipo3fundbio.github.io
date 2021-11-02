@@ -1,0 +1,299 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:ESP32-WROOM-32 U?
+U 1 1 618066D0
+P 4300 2700
+F 0 "U?" H 4300 4281 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 4300 4190 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 4300 1200 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 4000 2750 50  0001 C CNN
+	1    4300 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:TB6612FNG U?
+U 1 1 61807C99
+P 6550 1750
+F 0 "U?" H 6550 661 50  0000 C CNN
+F 1 "TB6612FNG" H 6550 570 50  0000 C CNN
+F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 7850 850 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/us/product/linear/motordriver/detail.TB6612FNG.html" H 7000 2350 50  0001 C CNN
+	1    6550 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Motor_DC M?
+U 1 1 618090F1
+P 8000 1400
+F 0 "M?" H 8158 1396 50  0000 L CNN
+F 1 "Motor_DC" H 8158 1305 50  0000 L CNN
+F 2 "" H 8000 1310 50  0001 C CNN
+F 3 "~" H 8000 1310 50  0001 C CNN
+	1    8000 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L hx711:HX711 U?
+U 1 1 6182662F
+P 6400 3600
+F 0 "U?" H 6400 3850 50  0001 C CNN
+F 1 "HX711" H 6400 3883 50  0000 C CNN
+F 2 "Sensor:SHT1x" H 6400 3850 50  0001 C CNN
+F 3 "Transmisor de celda" H 6400 3850 50  0001 C CNN
+	1    6400 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L ttp223:TTP223 U?
+U 1 1 618289E9
+P 2700 1650
+F 0 "U?" H 2700 1850 50  0001 C CNN
+F 1 "TTP223" H 2642 1327 50  0000 C CNN
+F 2 "Sensor_Pressure:Freescale_98ARH99089A" H 2700 1850 50  0001 C CNN
+F 3 "Sensor Touch" H 2700 1850 50  0001 C CNN
+	1    2700 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L galgaextensiometrica:GalgaExtensiometrica U?
+U 1 1 6182C710
+P 7750 3350
+F 0 "U?" H 7700 3700 50  0001 C CNN
+F 1 "GalgaExtensiometrica" H 8078 3355 50  0000 L CNN
+F 2 "Sensor_Pressure:Freescale_98ARH99089A" H 7700 3700 50  0001 C CNN
+F 3 "Sensor de presion" H 7700 3700 50  0001 C CNN
+	1    7750 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6182EF96
+P 6250 2750
+F 0 "#PWR?" H 6250 2500 50  0001 C CNN
+F 1 "GND" H 6255 2577 50  0000 C CNN
+F 2 "" H 6250 2750 50  0001 C CNN
+F 3 "" H 6250 2750 50  0001 C CNN
+	1    6250 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+7.5V #PWR?
+U 1 1 6182FA25
+P 7500 700
+F 0 "#PWR?" H 7500 550 50  0001 C CNN
+F 1 "+7.5V" H 7515 873 50  0000 C CNN
+F 2 "" H 7500 700 50  0001 C CNN
+F 3 "" H 7500 700 50  0001 C CNN
+	1    7500 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 700  7350 700 
+$Comp
+L Device:C C
+U 1 1 61830645
+P 7350 850
+F 0 "C" H 7465 896 50  0000 L CNN
+F 1 "100uF" H 7465 805 50  0000 L CNN
+F 2 "" H 7388 700 50  0001 C CNN
+F 3 "~" H 7350 850 50  0001 C CNN
+	1    7350 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61830EDD
+P 7350 1000
+F 0 "#PWR?" H 7350 750 50  0001 C CNN
+F 1 "GND" H 7355 827 50  0000 C CNN
+F 2 "" H 7350 1000 50  0001 C CNN
+F 3 "" H 7350 1000 50  0001 C CNN
+	1    7350 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1350 7800 1200
+Wire Wire Line
+	7800 1200 8000 1200
+Wire Wire Line
+	7150 1350 7800 1350
+Wire Wire Line
+	8000 1700 7800 1700
+Wire Wire Line
+	7800 1700 7800 1550
+Wire Wire Line
+	7150 1550 7800 1550
+Wire Wire Line
+	7350 700  6650 700 
+Wire Wire Line
+	6650 700  6650 750 
+Connection ~ 7350 700 
+$Comp
+L power:+5V #PWR?
+U 1 1 61834D8D
+P 5400 700
+F 0 "#PWR?" H 5400 550 50  0001 C CNN
+F 1 "+5V" H 5415 873 50  0000 C CNN
+F 2 "" H 5400 700 50  0001 C CNN
+F 3 "" H 5400 700 50  0001 C CNN
+	1    5400 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C-ceramico
+U 1 1 618354C5
+P 5400 850
+F 0 "C-ceramico" H 5515 896 50  0000 L CNN
+F 1 "0.1uF" H 5515 805 50  0000 L CNN
+F 2 "" H 5438 700 50  0001 C CNN
+F 3 "~" H 5400 850 50  0001 C CNN
+	1    5400 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 750  6250 700 
+Wire Wire Line
+	6250 700  5400 700 
+Connection ~ 5400 700 
+Wire Wire Line
+	7350 3250 7100 3250
+Wire Wire Line
+	7100 3250 7100 3450
+Wire Wire Line
+	7100 3450 6750 3450
+Wire Wire Line
+	6750 3550 7350 3550
+Wire Wire Line
+	7350 3400 7200 3400
+Wire Wire Line
+	7200 3400 7200 3650
+Wire Wire Line
+	7200 3650 6750 3650
+Wire Wire Line
+	6750 3750 7000 3750
+Wire Wire Line
+	7000 3750 7000 3150
+Wire Wire Line
+	7000 3150 7350 3150
+$Comp
+L power:GND #PWR?
+U 1 1 6183C3AC
+P 5400 1000
+F 0 "#PWR?" H 5400 750 50  0001 C CNN
+F 1 "GND" H 5405 827 50  0000 C CNN
+F 2 "" H 5400 1000 50  0001 C CNN
+F 3 "" H 5400 1000 50  0001 C CNN
+	1    5400 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6185C57A
+P 4300 4100
+F 0 "#PWR?" H 4300 3850 50  0001 C CNN
+F 1 "GND" H 4305 3927 50  0000 C CNN
+F 2 "" H 4300 4100 50  0001 C CNN
+F 3 "" H 4300 4100 50  0001 C CNN
+	1    4300 4100
+	1    0    0    -1  
+$EndComp
+Text Label 7450 7500 0    50   ~ 0
+ProyectoBiodiseño
+Text Label 8200 7650 0    50   ~ 0
+1-11-21
+$Comp
+L Relay:DIPxx-1Cxx-51x K
+U 1 1 61873CAC
+P 4150 4900
+F 0 "K" H 4580 4946 50  0000 L CNN
+F 1 "DIPxx-1Cxx-51x" H 4580 4855 50  0000 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 4600 4850 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4150 4900 50  0001 C CNN
+	1    4150 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 5200 3350 5200
+$Comp
+L power:+5V #PWR?
+U 1 1 61881273
+P 3350 5200
+F 0 "#PWR?" H 3350 5050 50  0001 C CNN
+F 1 "+5V" H 3365 5373 50  0000 C CNN
+F 2 "" H 3350 5200 50  0001 C CNN
+F 3 "" H 3350 5200 50  0001 C CNN
+	1    3350 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 4600 3950 4550
+Wire Wire Line
+	3950 4550 3550 4550
+Wire Wire Line
+	3550 4550 3550 3200
+Wire Wire Line
+	3550 3200 3700 3200
+$Comp
+L convertidordc-dc:ConvertidorDC-DC U?
+U 1 1 6188848C
+P 5900 4900
+F 0 "U?" H 5900 5150 50  0001 C CNN
+F 1 "ConvertidorDC-DC" H 5925 5123 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" H 5900 5150 50  0001 C CNN
+F 3 "dcdc" H 5900 5150 50  0001 C CNN
+	1    5900 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+7.5V #PWR?
+U 1 1 61888F84
+P 5050 5300
+F 0 "#PWR?" H 5050 5150 50  0001 C CNN
+F 1 "+7.5V" H 5065 5473 50  0000 C CNN
+F 2 "" H 5050 5300 50  0001 C CNN
+F 3 "" H 5050 5300 50  0001 C CNN
+	1    5050 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5200 5050 4850
+Wire Wire Line
+	5050 4850 5500 4850
+Wire Wire Line
+	5500 4950 5500 5300
+Wire Wire Line
+	5500 5300 5050 5300
+$Comp
+L power:GND #PWR?
+U 1 1 6188BC02
+P 5050 5300
+F 0 "#PWR?" H 5050 5050 50  0001 C CNN
+F 1 "GND" H 5055 5127 50  0000 C CNN
+F 2 "" H 5050 5300 50  0001 C CNN
+F 3 "" H 5050 5300 50  0001 C CNN
+	1    5050 5300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5050 5300
+Wire Wire Line
+	4350 5200 4800 5200
+Wire Wire Line
+	4800 5200 4800 4850
+Wire Wire Line
+	4800 4850 5050 4850
+Connection ~ 5050 4850
+$EndSCHEMATC
